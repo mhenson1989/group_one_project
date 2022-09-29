@@ -21,7 +21,7 @@ Segment #2
 Roles:
 Nathan: X
 Lucybel: Square
-Ruslana: Triangle
+Ruslana: Triangle (AWS --> Postgres
 Megan: Circle
 Segment #3
 
