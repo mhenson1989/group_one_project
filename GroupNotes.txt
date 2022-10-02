@@ -13,7 +13,31 @@ Lucybel: Square
 Ruslana: triangle
 Megan: circle 
 
-Week 2 Progress: 
+Week 2 Progress: Finalized Linear Regression Model, Created AWS/Postgres Database, Created new dataframe for Tableau visualizations, Began work on HTML for user output model.
+
+Tableau Link: https://public.tableau.com/app/profile/megan.henson/viz/Group_One_Final_Project/HeatMap?publish=yes
+
+Tableau Filters:
+1. Heat Map: 
+    - Used tablea_clean.csv
+    - Converted 'F1' to Discrete Dimension with Zip Code Geographic Role. Renamed to 'Zip Codes'
+    - Columns: Longitude, Rows: Latitude
+    - Map style
+    - Filters: Measure Names: 2017-01-31 (can use any date we want to select)
+    - Marks: Measure Values: Color, Zip Codes: Size, Measure Names: Detail
+    - Measured Values: Sum(2017-01-31)
+        -   Colors used: Red-Green-Gold Diverging
+2. Linear Regression Model
+    - Used clean_data.csv
+    - Mocked up three zip codes as example
+    - Columns: Date as a Discrete Dimension
+    - Rows: Zip Codes as a Continuous Dimension with Zip Code Geographic Role
+        - Note: I had to convert zip codes individually, so we might consider how we do this in mass, if needed
+    - Used Line chart
+    - Added a Trend Line in Analytics Tab
+        - In Trend Line Options, used a linear model type. Left other settings as is
+    
+
 
 Week 3:
 
