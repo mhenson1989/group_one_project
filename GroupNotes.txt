@@ -27,7 +27,12 @@ Tableau Filters:
     - Marks: Measure Values: Color, Zip Codes: Size, Measure Names: Detail
     - Measured Values: Sum(2017-01-31)
         -   Colors used: Red-Green-Gold Diverging
-2. Linear Regression Model
+2. 1. Heat Map w/Sliding Filters: 
+    - All Filters Same as above
+    - With Measure Name Filter: Change to Single Value Slider
+    - Remove tablea_clean.csv(Count) from filter list. Keep remaining. Moved Filter below Columns/Rows 
+ 
+3. Linear Regression Model
     - Used clean_data.csv
     - Mocked up three zip codes as example
     - Columns: Date as a Discrete Dimension
