@@ -8,11 +8,11 @@ PostgreSQL, usually referred to as “Postgres,” is an object-relational datab
 
 		1.	Registered server using the endpoint connectivity link from AWS
 		2.	Created table in pgAdmin 
-				Image 1
+				![image_1](Resources/image_1.png).
 		3.	Imported data into the table
 		4.	Read table 
-				Image 2
-				Image 3
+				![image_2](Resources/image_2.png).
+				![image_3](Resources/image_3.png).
 
 
 
