@@ -3,7 +3,9 @@ Utilizing AWS’s relational database (the largest cloud provider in the market 
 PostgreSQL, usually referred to as “Postgres,” is an object-relational database system that uses the SQL language.  
 
 •	Created a PostgreSQL Database in relational database (RDS) in AWS
+
 •	Created S3 bucket and stored data on AWS Simple Storage Service (Amazon S3)
+
 •	Connected an RDS to pgAdmin
 
 		1.	Registered server using the endpoint connectivity link from AWS
