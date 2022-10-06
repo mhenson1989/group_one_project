@@ -37,7 +37,7 @@ Segment #2
     - Megan: Circle 
 
     **Segment 2 Process & Progress**
-    In Week 2 of our project, we have finalized our linear regression model and saved the results (specifically the slope and intercepts by zip code) into a DataFrame and exported that to a CSV file, which we will use within our HTML code and website. Additionally, we have created our database using AWS and PGAdmin - we will use this database to connect to our website, where our slope_intercept.csv file is stored. We also began work on our visualizations for our final presentation. We opted to use Tableau for our visualizations, however, when we imported our clean_data.csv data set into Tableau, we found that the format of the data did not align with our visualizations, as the clean data set was more geared towards a linear regression model, rather than mapped visualizations. To overcome this obstacle, we decided to create an additional dataframe and CSV, which transposed the columns and rows of our data - this allowed us to use the data more effectively with maps. Currently, we have about 95% of our visualizations complete and are working on incorporating them into a Tableau story form for our final presentation. We also began our framework for our HTML code that will build our website. We plan to work more extensively on this in week 3. 
+    In Week 2 of our project, we have finalized our linear regression model and saved the results (specifically the slope and intercepts by zip code) into a DataFrame and exported that to a CSV file, which we will use within our HTML code and website. Additionally, we have created our database using AWS and PGAdmin - we will use this database to connect to our website, where our slope_intercept.csv file is stored. This will be integrated into our HTML code in week 3. We also began work on our visualizations for our final presentation. We opted to use Tableau for our visualizations, however, when we imported our clean_data.csv data set into Tableau, we found that the format of the data did not align with our visualizations, as the clean data set was more geared towards a linear regression model, rather than mapped visualizations. To overcome this obstacle, we decided to create an additional dataframe and CSV, which transposed the columns and rows of our data - this allowed us to use the data more effectively with maps. Currently, we have about 95% of our visualizations complete and are working on incorporating them into a Tableau story form for our final presentation. We also began our framework for our HTML code that will build our website. We plan to work more extensively on this in week 3. 
 
 Segment #3
 1. Roles: 
@@ -54,9 +54,28 @@ Segment #4
 
 ## **Project Dashboard & Presentation Outline**
 
-**Website**
-
+**Website Outline**
+- Clean styling with banner and title
+- Two entry fields - one for date and one for zip code
+    - Zip Code entry field will be a drop down pick list
+    - Date entry field will be a drop down calendar where a date will be selected
+- "Show Results" button
+    - When button is clicked, it will clear the entry fields
+    - Results will show Zip Code and Date with future projected price
+- Backend: 
+    - Read in file slope/intercept file from AWS
+    - Calculates future value using Y = MX + B (Linear Regression Model)
 
 **Tableau Storyboard & Presentation**
+1. Slide 1: Intro/Big Picture Questions
+2. Slide 2:Cleaning the Data - Scraping, Review and Early Analysis
+3. Slide 3:Machine Learning - Linear Regression Model
+    - How we decided on our model
+    - Process of building model and saving data
+4. Slide 4: Building and Integrating the Database
+5. Slide 5: Website - User Interface (link website)
+6. Slide 6 thru X: Analysis & Tableau Visualizations
+7. Slide X + 1: Closing and Q&A
+
 
 
