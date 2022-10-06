@@ -39,6 +39,25 @@ Segment #2
     **Segment 2 Process & Progress**
     In Week 2 of our project, we have finalized our linear regression model and saved the results (specifically the slope and intercepts by zip code) into a DataFrame and exported that to a CSV file, which we will use within our HTML code and website. Additionally, we have created our database using AWS and PGAdmin - we will use this database to connect to our website, where our slope_intercept.csv file is stored. This will be integrated into our HTML code in week 3. We also began work on our visualizations for our final presentation. We opted to use Tableau for our visualizations, however, when we imported our clean_data.csv data set into Tableau, we found that the format of the data did not align with our visualizations, as the clean data set was more geared towards a linear regression model, rather than mapped visualizations. To overcome this obstacle, we decided to create an additional dataframe and CSV, which transposed the columns and rows of our data - this allowed us to use the data more effectively with maps. Currently, we have about 95% of our visualizations complete and are working on incorporating them into a Tableau story form for our final presentation. We also began our framework for our HTML code that will build our website. We plan to work more extensively on this in week 3. 
 
+    **AWS --> pgAdmin**
+    Utilizing AWS’s relational database (the largest cloud provider in the market today), we set up and connected a Postgres database. 
+
+    PostgreSQL, usually referred to as “Postgres,” is an object-relational database system that uses the SQL language.  
+
+    •	Created a PostgreSQL Database in relational database (RDS) in AWS
+
+    •	Created S3 bucket and stored data on AWS Simple Storage Service (Amazon S3)
+
+    •	Connected an RDS to pgAdmin
+
+		1.	Registered server using the endpoint connectivity link from AWS
+		2.	Created table in pgAdmin 
+![image_1](Resources/image_1.png).
+		3.	Imported data into the table
+		4.	Read table 
+![image_2](Resources/image_2.png).
+![image_3](Resources/image_3.png).
+
 Segment #3
 1. Roles: 
     - Nathan: Circle
