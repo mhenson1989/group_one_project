@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <div class="panel m-top-75">
+              <div class="panel-body">
+                <p>{{ text }}</p>
+                <h1 class="text-center">Open console!</h1>
+        
+
+                    <select name="zipInput" id="zipInput">
+                        {% for zip in zips %}
+                        <option value="{{zip}}">{{zip}}</option>
+                        {% endfor %}
+                    </select>
+                    <input type="date" name="dateInput" id="dateInput">
+                    <p id="return"></p>
+                    <button id="subButton" type="submit">submit</button>
+                <script>
+                    document.querySelector('#subButton').addEventListener('click',function (e){
+                        var p = document.querySelector('#return')
+                        let input = +document.querySelector('#zipInput').value
+                        let date = document.getElementById('dateInput')
+                        let xhttp = new XMLHttpRequest()
+                        xhttp.open("GET", `/api/${+input}`)
+                        xhttp.send()
+                        xhttp.onreadystatechange = function(){
+                            if (this.readyState == 4 && this.status ==200){
+                                p.innerHTML = this.responseText['return']
+                                console.log(this.responseText)
+                                console.log(Date.UTC(...date.value.split('-')))
+                            }
+                        }
+
+                    })
+                </script>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <input type="file" id="uploadfile" accept=".csv">
+      <button id="uploadconfirm">Upload File</button> -->
+
+      <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+      <script src="data.js"></script>
+    
+</body>
+
+</html>
