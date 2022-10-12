@@ -1,15 +1,16 @@
 from flask import Flask, render_template, jsonify
-# from sqlalchemy import create_engine
-# from flask_sqlalchemy import create_engine
+#from sqlalchemy import create_engine
+from flask_sqlalchemy import create_engine
 
 app = Flask(__name__)
-# engine = create_engine("SQL_URI")
+engine = create_engine("https://my-first-s3-data-bucket-1.s3.amazonaws.com/slope_intercept.csv")
 
 @app.route('/')
 def home():
-    # df = pd.read_sql('mxpluxbtable', con=engine)
+    # tx housing is the table in pgadmin
+    df = pd.read_sql('txhousing', con=engine)
 
-    return render_template("base.html", zips= [12345,23456,34567])
+    return render_template("base.html", zips= [zipcodes])
 
 @app.route("/api/<zipcode>")
 def api(zipcode):
