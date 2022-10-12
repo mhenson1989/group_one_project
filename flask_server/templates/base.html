@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Sales Price Predictions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<!-- Added Megans styling but the banner was broken. I changed the banner URL in style and it still didn't fix it so might be a code issue since we are using flask now? -->
+
+<body>
+	<header class="main-header">
+		<div id="banner"></div>
+	</header>
+  <center>
+	<section>
+		<h1> Texas Home Sale Predictions by Zip Code </h1><br><br/>
+		</div>
+		</div>
+		<strong>Use our Linear Regression Model to predict future house sales prices for major Zip Codes in Texas.</strong>
+    <br><br>
+    <br><br>
+    <!-- Edited this section. Going to add comments to what I think is happening -->
+	</section>
+                    <label for="zip">Choose a Zip Code: </label>
+                    <select name="zipInput" id="zipInput">
+                        {% for zip in zips %}
+                        <option value="{{zip}}">{{zip}}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="date">Choose a Date: </label> <input type="date" min="2024-01-01" name="dateInput" id="dateInput">
+                    <p id="return"></p>
+                    <br><br>
+                    <button id="subButton" type="submit">submit</button>
+                <script>
+                // This line adds an event to the submit button that triggers the code below when clicked. The variables are named in lines 40-43
+                    document.querySelector('#subButton').addEventListener('click',function (e){
+                        var p = document.querySelector('#return')
+                        let input = +document.querySelector('#zipInput').value
+                        let date = document.getElementById('dateInput')
+                        let xhttp = new XMLHttpRequest()
+                        // This triggers the app.route api in main.py to call the database for slope and intercept using zip code. xmlhttp is basically just something you can use to fetch data from a web server
+                        xhttp.open("GET", `/api/${+input}`)
+                        xhttp.send()
+                        xhttp.onreadystatechange = function(){
+                            // This line of code checks if the api call was completed successfully (ready state 4 and status 200) it then logs the response and converts the date to numeric
+                            if (this.readyState == 4 && this.status ==200){
+                                p.innerHTML = this.responseText['return']
+                                console.log(this.responseText)
+                                console.log(Date.UTC(...date.value.split('-')))
+                            }
+                        }
+
+                    })
+                </script>
+  </center>
+  <br><br>
+  <!-- Added the footer from Megan's code. I was trying to get the footer to sticky to the bottom but everything I tried also changed something else on the footer. Not sure if you have any idea's Megan -->
+      <footer>
+        <p><b>Group One Final Project Presented By:</b><br></br>
+          <a href="https://github.com/SubF">Nathan Yu., </a>
+          <a href="https://github.com/romashka79">Ruslana N., </a>
+          <a href="https://github.com/montillall">Lucybel M. and </a>
+          <a href="https://github.com/mhenson1989">Megan H.</a>
+          <address></p>
+          <a href="https://public.tableau.com/app/profile/megan.henson/viz/Group_One_Final_Project/HeatMapwithSlidingDateFilter">Explore our Project</a>
+        </address>
+      </footer>
+    
+</body>
+
+</html>
