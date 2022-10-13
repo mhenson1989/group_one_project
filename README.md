@@ -78,7 +78,7 @@ Segment #3
     - Ruslana: X
     - Megan: Triangle
 
-       **Segment 3 Process & Progress**
+       **Segment 3 Process & Progress:**
        Requirements and Branch Merges: We are in the process of finalizing our HTML code and therefore still have open branches going into Segment 4. We will fully finalize and merge in our last submission. 
        Storyboard and Final Presentation: We are currently fine tuning our final presentation and will be using Tableau Story in lieu of Google Slides to present our final story. Currently, we have 90% of our story completed and placeholders where additional data is needed to complete. Within our story, we outline much of our analysis process, as well as justification for project direction, website and final visualizations. 
        The final link for our Tableau Story can be found here: https://public.tableau.com/app/profile/megan.henson/viz/Group_One_Final_Project/GroupOneFinalProject?publish=yes
