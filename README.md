@@ -1,20 +1,26 @@
 # Group_1_Final_Project
 
-## **Project Outline**
+## **Overall Project Outline**
 
 The purpose of our project is to use machine learning, specifically a linear regression model, in order to predict future housing prices by zip code and by date within major Texas Zip Codes. 
 
 **1. Broad Questions**
+    -
     - *Can we use machine learning to predict sales trends by date and by region/zip code?*
     - *When evaluating the linear regression model, there are statistically significant spikes in price that do not align with the trend line of the model. We would like to explore the spikes and see if there is correlation between the sales spikes and historically significant events (i.e. COVID, housing bubbles, recessions, etc.)*
 
 **2. Technologies & Data Used** 
+    -
     - Linear Regression: We will use a linear regression model to implement our predictive machine learning, specifically using zip code, state and date data points, with zip code data being our core data (that which we will want to analyze by). 
         - The model will plot every zip code as an individual regression model and store the results in a dictionary that will be used later in the project for our user interface. 
         - Libraries Used: MatPlotLib, SkLearn, NumPy, Pandas, Jupyter Notebook and DateTime
+
     - Zillow offers a large collection of data points, related to housing prices, by zip code, by state, and over time. We compiled and cleaned this data into a DataFrame. 
+
     - Database: PGAdmin and AWS
+
     - Dataframes Created Using Jupyter Notebook:
+
         - df (DataFrame directly read from original data CSV file: data_unclean.csv)
             - This data was sourced from Zillow
         - df1 (Dataframe that was transposed and cleaned from df)
@@ -24,7 +30,9 @@ The purpose of our project is to use machine learning, specifically a linear reg
         - data_tableau (Dataframe that was transposed for visualizations within Tableau) 
             - We created the tableau_clean.csv to upload into Tableau
             - We created the tableau_clean.csv so that we could transpose the columns and rows, for specifically mapping visualizations that were not easily read using the clean_data.csv file 
+
     - Visualization: 
+
         - Predictive Model: Users will be able to access a website, pick a zip code and future date. The website will output results upon clicking an analyze button. 
         - User Interactive Website: HTML, Flask Server, SQL_Alchemy, XMLHTTP, Python, Javascript, PGAdmin and AWS
         - Final Presentation: Tableau - utilizing the Story mode for our final presenation, however utilized sheets and dashboards to create charts and visualizations. Additionally, we used MatPlotLib for visualizations.
@@ -86,6 +94,12 @@ Segment #3
 
 Segment #4
 1. Roles: 
+    - Nathan: Circle
+    - Lucybel: Square
+    - Ruslana: Triangle
+    - Megan: X
+
+       **Segment 4 Process & Progress**
 
 
 ## **Project Dashboard & Presentation Outline**
@@ -106,12 +120,12 @@ Segment #4
 1. Slide 1: Intro/Big Picture Questions
 2. Slide 2:Cleaning the Data - Scraping, Review and Early Analysis
 3. Slide 3:Machine Learning - Linear Regression Model
-    - How we decided on our model
-    - Process of building model and saving data
-4. Slide 4: Building and Integrating the Database
-5. Slide 5: Website - User Interface (link website)
-6. Slide 6 thru X: Analysis & Tableau Visualizations
-7. Slide X + 1: Closing and Q&A
+    - Slide 4: How we decided on our model
+    - Slide 5: Process of building model and saving data
+4. Slide 6: Building and Integrating the Database
+5. Slide 7: Website - User Interface (link website)
+6. Slide 8 thru 11: Analysis & Tableau Visualizations
+7. Slide 12: Closing and Q&A
 
 
 
