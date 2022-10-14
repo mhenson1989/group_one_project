@@ -2,19 +2,32 @@
 
 ## **Project Outline**
 
+***The purpose of our project is to use machine learning, specifically a linear regression model, in order to predict future housing prices by zip code and by date, within major Texas zip codes.***
+
 **1. Broad Questions**
     - *Can we use machine learning to predict sales trends by date and by region/zip code?*
     - *When evaluating the linear regression model, there are statistically significant spikes in price that do not align with the trend line of the model. We would like to explore the spikes and see if there is correlation between the sales spikes and historically significant events (i.e. COVID, housing bubbles, recessions, etc.)*
 
 **2. Technologies & Data Used** 
-    - Linear Regression: We will use a linear regression model to implement our predictive machine learning, specifically using zip code, state and date data points, with zip code data being our core data (that which we will want to analyze by). 
+    - **Linear Regression:** We will use a linear regression model to implement our predictive machine learning, specifically using zip code, state and date data points, with zip code data being our core data (that which we will want to analyze by). 
         - The model will plot every zip code as an individual regression model and store the results in a dictionary that will be used later in the project for our user interface. 
-    - Zillow offers a large collection of data points, related to housing prices, by zip code, by state, and over time. We plan to compile and clean this data into a DataFrame. 
+        - Libraries Used: MatPlotLib, SKLearn, NumPy, Pandas, Jupyter Notebook and DateTime.
+    - Zillow offers a large collection of data points, related to housing prices, by zip code, by state, and over time. We compiled and clean this data into a DataFrame 
     - Database: PGAdmin and AWS
+    - Dataframes Created Using Jupyter Notebook:
+        - df (DataFrame directly read from original data CSV file: data_unclean.csv)
+            - This data was souced from Zillow
+        - df1 (DataFrame that was transposed and cleaned from df)
+            - This data was saved as clean_data.csv
+        - clean_data (DataFrame read in clean_data.csv and used for Linear Regression Model)
+            - We ceeated the slope_intercept.csv after running the clean_data Dataframe through the Linear Regression Model.
+        - data_tableau (Dataframe that was transposed for visualizations within Tableau)
+            - We created the tableau_clean.csv to upload into Tableau
+            - We created the tableau_clean.csv so that we could transpose the columns and rows, specifically for mapping visualizations that were not easily read using the clean_data.csv file
     - Visualization: 
         - Predictive Model: Users will be able to access a website, pick a zip code and future date. The website will output results upon clicking an analyze button. 
-        - User Interactive Website: HTML and Javascript
-        - Final Presentation: Tableau - utilizing the Story mode
+        - User Interactive Website Technologies Used: HTML, Flask Server, SQL_Alchemy, XMLHTTP, Pthon, Javascript, PGAdmin and AWS
+        - Final Presentation: Tableau - utilizing the Story mode for our final presentation, however, utilized sheets and dashboards to create final charts and visualizations. Additionally, we used MatPlotLib for some linear regression visualizations. 
   
 
 ## **Project Phases & Timeline**
@@ -39,6 +52,21 @@ Segment #2
     **Segment 2 Process & Progress**
     In Week 2 of our project, we have finalized our linear regression model and saved the results (specifically the slope and intercepts by zip code) into a DataFrame and exported that to a CSV file, which we will use within our HTML code and website. Additionally, we have created our database using AWS and PGAdmin - we will use this database to connect to our website, where our slope_intercept.csv file is stored. This will be integrated into our HTML code in week 3. We also began work on our visualizations for our final presentation. We opted to use Tableau for our visualizations, however, when we imported our clean_data.csv data set into Tableau, we found that the format of the data did not align with our visualizations, as the clean data set was more geared towards a linear regression model, rather than mapped visualizations. To overcome this obstacle, we decided to create an additional dataframe and CSV, which transposed the columns and rows of our data - this allowed us to use the data more effectively with maps. Currently, we have about 95% of our visualizations complete and are working on incorporating them into a Tableau story form for our final presentation. We also began our framework for our HTML code that will build our website. We plan to work more extensively on this in week 3. 
 
+    **Building & Integrating Database: AWS to pgAdmin**
+    Utilizing AWS's relational database (the largest cloud provider in the market today), we set up and connected a Postgres database. 
+
+    PostgresSQL, usually referred to as "Postgres", is an object-relational database system that uses the SQL language. We used the following steps to create our database:
+        - Created a PostgresSQL Database in relational database (RDS) in AWS
+        - Created S3 bucket and stored data on AWS Simple Storage Service (Amazon S3)
+        Connected an RDS to pgAdmin.
+            1. Registered server using the endpoint connectivity link from AWS
+            2. Created table in pgAdmin
+            ![image_1](https://github.com/mhenson1989/group_one_project/blob/RNikolaev/Resources/image_1.png)
+            3. Imported data into the table
+            4. Read table
+            ![image_2](https://github.com/mhenson1989/group_one_project/blob/RNikolaev/Resources/image_2.png)
+            ![image_3](https://github.com/mhenson1989/group_one_project/blob/RNikolaev/Resources/image_3.png)
+
 Segment #3
 1. Roles: 
     - Nathan: Circle
@@ -47,9 +75,18 @@ Segment #3
     - Megan: Triangle
 
        **Segment 3 Process & Progress**
+       - *Requirements and Branch Merges:* We are in the process of finalizing our HTML code and therefore still have open branches going into segment 4. We will fully finalize and merge in our final submission. 
+       - *Storyboard and Final Presentation:* We are currently fine tuning our final presentation and will be using Tableau Story in liew of Google Slides for our presentation. Currently, we have 90% of our story cimpleted and placeholders where additional data is needed to complete. Within our story, we outline much of the analysis prcess, as well as justification for project direction, website and final visualizations. The final link for our Tableau story can be found [here](https://public.tableau.com/views/Group_One_Final_Project/GroupOneFinalProject?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link).
+       - *Testing:* We are actively testing and finalizing code. In addition to testing code seperately, we have been alloting class time and additional project work time on Saturday's and Sunday's each week to run and test code. 
 
 Segment #4
-1. Roles: 
+1. Roles:
+    - Nathan: Circle
+    - Lucybel: Square
+    - Ruslana: Triangle
+    - Megan: X
+
+       **Segment 4 Process & Progress**
 
 
 ## **Project Dashboard & Presentation Outline**
@@ -70,12 +107,12 @@ Segment #4
 1. Slide 1: Intro/Big Picture Questions
 2. Slide 2:Cleaning the Data - Scraping, Review and Early Analysis
 3. Slide 3:Machine Learning - Linear Regression Model
-    - How we decided on our model
-    - Process of building model and saving data
-4. Slide 4: Building and Integrating the Database
-5. Slide 5: Website - User Interface (link website)
-6. Slide 6 thru X: Analysis & Tableau Visualizations
-7. Slide X + 1: Closing and Q&A
+    - Slide 4: How we decided on our model
+    - Slide 5: Process of building model and saving data
+4. Slide 6: Building and Integrating the Database
+5. Slide 7: Website - User Interface (link website)
+6. Slide 8 thru 11: Analysis & Tableau Visualizations
+7. Slide 12: Closing and Q&A
 
 
 
