@@ -41,7 +41,9 @@
 
     #### **Segment 1 Process & Progress**
 
-    Within the first phase of our project, we have compiled and scrubbed data from Zillow, specifically assessing sales prices by date and by zip code within Texas. This data was then input into a linear regression model to predict sales trends and future sles prices. When creating our linear regression model, one obstacle was determining how to account for multiple zip codes, each with its own regression model. We opted to create a for loop and run each zip code through the model, then storing it into a dictionary that we will then convert into a dataframe for future phases of our project. Additionally, this week, we have created an outline for our user interface feature, which will allow the user to input a specific zip code in Texas and a future date - the program would then output a predicted sales price for that zip code and date. 
+    Within the first phase of our project, we have compiled and scrubbed data from Zillow, specifically assessing sales prices by date and by zip code within Texas. This data was then input into a linear regression model to predict sales trends and future sles prices. When creating our linear regression model, one obstacle was determining how to account for multiple zip codes, each with its own regression model. We opted to create a for loop and run each zip code through the model, then storing it into a dictionary that we will then convert into a dataframe for future phases of our project. Additionally, this week, we have created an outline for our user interface feature, which will allow the user to input a specific zip code in Texas and a future date - the program would then output a predicted sales price for that zip code and date. The image below outlines our clean DataFrame created in Jupyter Notebook. 
+
+    ![Dataframe](https://github.com/mhenson1989/group_one_project/blob/main/Images/Dataframe.png)
 
 ### Segment #2
 1. **Roles:**
@@ -88,7 +90,10 @@
     - Megan: X
 
        #### **Segment 4 Process & Progress**
-
+       - Finalize HTML to go live on User Interactive Website
+       - Finalize Tableau Story for Presentation
+       - Clean Git and Merge Final Versions
+       - Record & Practice Final Presentation 
 
 ## **Project Dashboard & Presentation Outline**
 
@@ -106,8 +111,8 @@
 
 ### **Tableau Storyboard & Presentation**
 1. Slide 1: Intro/Big Picture Questions
-2. Slide 2:Cleaning the Data - Scraping, Review and Early Analysis
-3. Slide 3:Machine Learning - Linear Regression Model
+2. Slide 2: Cleaning the Data - Scraping, Review and Early Analysis
+3. Slide 3: Machine Learning - Linear Regression Model
     - Slide 4: How we decided on our model
     - Slide 5: Process of building model and saving data
 4. Slide 6: Building and Integrating the Database
@@ -115,5 +120,19 @@
 6. Slide 8 thru 11: Analysis & Tableau Visualizations
 7. Slide 12: Closing and Q&A
 
+### Final Thoughts
+
+### Future Analysis Recommendations
+1. Expand analysis to include more robust data set with additional property details.
+
+2. Explore outside factors related to housing market, such as inflation.
+
+3. Perform analysis that factors in supply and demand graph over time.
+
+### What Would We Change?
+With additional time, we would consider changing the scope of our data to include a more robust data set with additional property information, such as square footage and number of rooms, as well as explore more exact location details, like specific neighborhoods or adddresses. With this data, we would have been able to expand the scope of our analysis even further. Additionally, we would have been able to expand the user interactivity functionality of our website, which would have allowed a user to enhance their search and filter efforts. 
+
+### Summary
+In our analysis, we were able to effectively predict the residential sales prices of homes in several Texas Zip Codes using linear regression. Our analysis showed the trajectory of housing appreciation rates and can calculate the rates well into future dates. Additionally, we were able to take this predictive data and transfer it into a user friendly website, that would allow individuals to review average house prices by zip code and date, thus understanding the appreciation or depreciation value of the homes within specific areas. We also saw within our regression model, the significant impact that COVID had on the housing market. In one example, over the course of 10 years, one specific zip codes housing prices increased approximately 12.5% higher than they would have if the housing market had not been effected by COVID. 
 
 
