@@ -1,1 +1,0 @@
-# group_one_project
