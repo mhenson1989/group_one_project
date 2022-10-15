@@ -7,6 +7,7 @@
     <title>Home Sales Price Predictions</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <!--  <style>copy and paste contents of style.css</style> -->
 </head>
 <!-- Added Megans styling but the banner was broken. I changed the banner URL in style and it still didn't fix it so might be a code issue since we are using flask now? -->
 
@@ -500,6 +501,7 @@
                     <br><br>
                     <button id="subButton" type="submit">submit</button>
                 <script>
+                
                 // This line adds an event to the submit button that triggers the code below when clicked. The variables are named in lines 40-43
                     document.querySelector('#subButton').addEventListener('click',function (e){
                         var p = document.querySelector('#return')
@@ -512,12 +514,22 @@
                         xhttp.onreadystatechange = function(){
                             // This line of code checks if the api call was completed successfully (ready state 4 and status 200) it then logs the response and converts the date to numeric
                             if (this.readyState == 4 && this.status ==200){
-                                p.innerHTML = this.responseText['return']
                                 console.log(this.responseText)
                                 console.log(Date.UTC(...date.value.split('-')))
+                                // const z=input
+                                // const ddisplay=date
+                                const responseArray=this.responseText.split(",")
+                                const m=Number(responseArray[0])
+                                const b=Number(responseArray[1])
+                                const d=Number(Date.UTC(...date.value.split('-')))
+                                const x=d*1000000
+                                const result= m*x + b
+                                console.log(result)
+                                p.innerHTML = (result).toFixed(2)
+                                // console.log(Number(responseArray[0])*Number(Date.UTC(...date.value.split('-')))+Number(responseArray[1]))
                             }
                         }
-
+                        
                     })
                 </script>
   </center>
