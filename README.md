@@ -116,7 +116,7 @@
     - Slide 4: How we decided on our model
     - Slide 5: Process of building model and saving data
 4. Slide 6: Building and Integrating the Database
-5. Slide 7: Website - User Interface (link website)
+5. Slide 7: Website - User Interface
 6. Slide 8 thru 11: Analysis & Tableau Visualizations
 7. Slide 12: Closing and Q&A
 
