@@ -115,10 +115,14 @@
 3. Slide 3: Machine Learning - Linear Regression Model
     - Slide 4: How we decided on our model
     - Slide 5: Process of building model and saving data
+![Linear Regression](https://raw.githubusercontent.com/mhenson1989/group_one_project/main/Images/LinearRegressionModel.png)
 4. Slide 6: Building and Integrating the Database
 5. Slide 7: Website - User Interface
+![Website](https://raw.githubusercontent.com/mhenson1989/group_one_project/main/Images/Website.PNG)
 6. Slide 8 thru 11: Analysis & Tableau Visualizations
+![Heat Map](https://raw.githubusercontent.com/mhenson1989/group_one_project/main/Images/TexasHeatMap_wSlidingDateFilter.PNG)
 7. Slide 12: Closing and Q&A
+
 
 ### Final Thoughts
 
